@@ -1,43 +1,31 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
 
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+import HeroSection from '@site/src/components/HeroSection';
+import ProjectOverview from '@site/src/components/ProjectOverview';
+import PipelineSection from '@site/src/components/PipelineSection';
+import VideoShowcase from '@site/src/components/VideoShowcase';
+import TechBadges from '@site/src/components/TechBadges';
+import DemoResults from '@site/src/components/DemoResults';
+import FutureWork from '@site/src/components/FutureWork';
+import TeamSection from '@site/src/components/TeamSection';
+import DocsPreview from '@site/src/components/DocsPreview';
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      description="An educational capstone prototype connecting live RTSP video, ML-assisted target detection, homography coordinate mapping, and Arduino-controlled servo actuation into one end-to-end demonstration pipeline."
+    >
+      <HeroSection />
       <main>
-        <HomepageFeatures />
+        <ProjectOverview />
+        <PipelineSection />
+        <VideoShowcase />
+        <TechBadges />
+        <DemoResults />
+        <FutureWork />
+        <TeamSection />
+        <DocsPreview />
       </main>
     </Layout>
   );

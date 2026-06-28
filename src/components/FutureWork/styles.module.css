@@ -1,0 +1,142 @@
+.section {
+  padding: 5rem 0;
+  background: var(--lts-bg-primary);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.sectionBadge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--lts-cyan);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--lts-text-primary);
+  margin: 0 0 1rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--lts-text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* Left indicator column */
+.indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--lts-gradient);
+  border: 2px solid var(--lts-bg-primary);
+  flex-shrink: 0;
+  margin-top: 6px;
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+  transition: box-shadow 0.25s ease;
+}
+
+.item:hover .dot {
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.55);
+}
+
+.line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(180deg, rgba(34, 211, 238, 0.3) 0%, rgba(167, 139, 250, 0.15) 100%);
+  margin: 4px 0 0;
+  min-height: 24px;
+}
+
+/* Content */
+.content {
+  padding-bottom: 2.5rem;
+  flex: 1;
+}
+
+.item:last-child .content {
+  padding-bottom: 0;
+}
+
+.stepNum {
+  font-size: 0.65rem;
+  font-weight: 700;
+  font-family: var(--ifm-font-family-monospace);
+  color: var(--lts-cyan);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+  opacity: 0.8;
+}
+
+.itemTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--lts-text-primary);
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.itemDesc {
+  font-size: 0.875rem;
+  color: var(--lts-text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Hover highlight */
+.item:hover .itemTitle {
+  color: var(--lts-cyan);
+  transition: color 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .item {
+    gap: 1rem;
+  }
+
+  .content {
+    padding-bottom: 2rem;
+  }
+}

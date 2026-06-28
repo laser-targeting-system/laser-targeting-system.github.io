@@ -1,0 +1,112 @@
+.section {
+  padding: 5rem 0;
+  background: var(--lts-bg-primary);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionBadge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--lts-cyan);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--lts-text-primary);
+  margin: 0 0 1rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--lts-text-muted);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Chip grid */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 1.1rem 0.55rem 0.65rem;
+  background: var(--lts-bg-card);
+  border: 1px solid var(--lts-border-subtle);
+  border-radius: 999px;
+  cursor: default;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--chip-color) 40%, transparent);
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--chip-color) 20%, transparent);
+}
+
+.chipAbbr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--chip-color) 15%, transparent);
+  color: var(--chip-color);
+  font-size: 0.62rem;
+  font-weight: 800;
+  font-family: var(--ifm-font-family-monospace);
+  flex-shrink: 0;
+  letter-spacing: -0.03em;
+}
+
+.chipLabel {
+  font-size: 0.855rem;
+  font-weight: 600;
+  color: var(--lts-text-primary);
+  white-space: nowrap;
+}
+
+.chipCategory {
+  font-size: 0.68rem;
+  color: var(--lts-text-subtle);
+  border-left: 1px solid var(--lts-border-subtle);
+  padding-left: 0.7rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .chip {
+    padding: 0.45rem 0.85rem 0.45rem 0.5rem;
+  }
+
+  .chipCategory {
+    display: none;
+  }
+}
