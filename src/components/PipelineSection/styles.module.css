@@ -60,6 +60,7 @@
 .pipeline {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0;
   overflow-x: auto;
   padding-bottom: 1rem;
@@ -193,7 +194,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 1180px) {
   .pipeline {
     justify-content: flex-start;
   }
