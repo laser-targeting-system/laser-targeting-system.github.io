@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import Link from '@docusaurus/Link';
 import HeroTitle from '../HeroTitle';
 import styles from './styles.module.css';
@@ -171,10 +171,10 @@ export default function HeroSection(): ReactNode {
       <div className={styles.inner}>
         {/* Text content */}
         <div className={styles.textSide}>
-          <div className={styles.badge}>
+          {/* <div className={styles.badge}>
             <span className={styles.badgeDot} aria-hidden="true" />
             Educational Capstone Prototype
-          </div>
+          </div> */}
 
           <HeroTitle />
 
@@ -203,9 +203,9 @@ export default function HeroSection(): ReactNode {
             </Link>
           </div>
 
-          <p className={styles.disclaimer}>
+          {/* <p className={styles.disclaimer}>
             Safe demonstration setup — uses a low-power LED surrogate, not a real laser.
-          </p>
+          </p> */}
         </div>
 
         {/* SVG Visual */}
