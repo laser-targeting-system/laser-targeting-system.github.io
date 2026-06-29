@@ -1,0 +1,137 @@
+/* ─── Hero Title Styles ───────────────────────────────────────────────────── */
+.heroTitle {
+  margin: 0 0 1.25rem 0;
+  padding: 0;
+}
+
+.visualTitle {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  animation: titleGlowPulse 5s ease-in-out infinite;
+}
+
+/* Row 1: LASER */
+.rowLaser {
+  font-family: 'Orbitron', 'Inter', sans-serif;
+  font-size: clamp(2.4rem, 6.2vw, 4.4rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  display: flex;
+  align-items: flex-end;
+  /* Metallic silver gradient bound to CSS variables */
+  background: linear-gradient(180deg, var(--lts-title-laser-stop1) 0%, var(--lts-title-laser-stop2) 55%, var(--lts-title-laser-stop3) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: var(--lts-title-laser-stop1);
+  margin-bottom: 0.1em;
+}
+
+/* Custom SVG character A */
+.charA {
+  display: inline-block;
+  height: 0.76em; /* Adjust to align with capital letters of Orbitron */
+  width: auto;
+  margin: 0 0.02em 0.03em 0.04em;
+  vertical-align: baseline;
+  flex-shrink: 0;
+}
+
+/* Row 2: TARGETING */
+.rowTargeting {
+  font-family: 'Orbitron', 'Inter', sans-serif;
+  font-size: clamp(1.05rem, 2.7vw, 1.95rem);
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  line-height: 1;
+  text-transform: uppercase;
+  /* Cyan neon gradient bound to CSS variables */
+  background: linear-gradient(180deg, var(--lts-title-cyan-stop1) 0%, var(--lts-title-cyan-stop2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: var(--lts-title-cyan-stop1);
+  margin-bottom: 0.18em;
+  padding-left: 0.05em;
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.2);
+}
+
+/* Row 3: SYSTEM */
+.rowSystemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+.rowSystem {
+  font-family: 'Orbitron', 'Inter', sans-serif;
+  font-size: clamp(0.72rem, 1.8vw, 1.05rem);
+  font-weight: 800;
+  letter-spacing: 0.44em;
+  line-height: 1;
+  text-transform: uppercase;
+  /* Violet neon gradient bound to CSS variables */
+  background: linear-gradient(180deg, var(--lts-title-violet-stop1) 0%, var(--lts-title-violet-stop2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: var(--lts-title-violet-stop1);
+  text-shadow: 0 0 10px rgba(167, 139, 250, 0.2);
+  /* Compensate letter spacing on the right to align perfectly */
+  padding-left: 0.44em;
+}
+
+/* Gradient lines */
+.lineLeft,
+.lineRight {
+  height: 2px;
+  flex-grow: 1;
+  min-width: 15px;
+  opacity: 0.75;
+}
+
+.lineLeft {
+  background: linear-gradient(90deg, transparent 0%, rgba(34, 211, 238, 0.45) 50%, #7c3aed 100%);
+}
+
+.lineRight {
+  background: linear-gradient(90deg, #7c3aed 0%, rgba(34, 211, 238, 0.45) 50%, transparent 100%);
+}
+
+
+
+:global([data-theme='light']) .lineLeft {
+  background: linear-gradient(90deg, transparent 0%, rgba(8, 145, 178, 0.3) 50%, #7c3aed 100%);
+}
+
+:global([data-theme='light']) .lineRight {
+  background: linear-gradient(90deg, #7c3aed 0%, rgba(8, 145, 178, 0.3) 50%, transparent 100%);
+}
+
+/* ─── Ambient Glow Pulse Animation ───────────────────────────────────────── */
+@keyframes titleGlowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.1)) drop-shadow(0 0 20px rgba(167, 139, 250, 0.05));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(34, 211, 238, 0.25)) drop-shadow(0 0 28px rgba(167, 139, 250, 0.15));
+  }
+}
+
+:global([data-theme='light']) .visualTitle {
+  animation: none; /* Disable pulsing glow in light mode to keep design clean */
+}
+
+/* ─── Responsive Adjustments ────────────────────────────────────────────── */
+@media (max-width: 996px) {
+  .visualTitle {
+    align-items: center;
+    margin: 0 auto;
+  }
+}

@@ -6,7 +6,7 @@
  * GitHub Pages custom headers), include fonts.googleapis.com and fonts.gstatic.com
  * in the style-src / font-src directives.
  */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Orbitron:wght@400..900&display=swap');
 
 /* ─── Light Mode Tokens ──────────────────────────────────────────────────── */
 :root {
@@ -55,7 +55,17 @@
   --lts-glow-violet: 0 0 24px rgba(124, 58, 237, 0.25);
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Title gradient stops */
+  --lts-title-laser-stop1: #1e293b;
+  --lts-title-laser-stop2: #475569;
+  --lts-title-laser-stop3: #64748b;
+  --lts-title-cyan-stop1: #0891b2;
+  --lts-title-cyan-stop2: #0e7490;
+  --lts-title-violet-stop1: #7c3aed;
+  --lts-title-violet-stop2: #6d28d9;
 }
+
 
 /* ─── Dark Mode Tokens ───────────────────────────────────────────────────── */
 [data-theme='dark'] {
@@ -102,7 +112,17 @@
   --ifm-footer-background-color: #030a14;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Title gradient stops */
+  --lts-title-laser-stop1: #ffffff;
+  --lts-title-laser-stop2: #e2e8f0;
+  --lts-title-laser-stop3: #94a3b8;
+  --lts-title-cyan-stop1: #67e8f9;
+  --lts-title-cyan-stop2: #0891b2;
+  --lts-title-violet-stop1: #ddd6fe;
+  --lts-title-violet-stop2: #7c3aed;
 }
+
 
 /* ─── Global Resets & Base ───────────────────────────────────────────────── */
 html {
@@ -205,3 +225,16 @@ body {
 code {
   border-radius: 4px;
 }
+
+/* ─── Screen reader helper ────────────────────────────────────────────────── */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+

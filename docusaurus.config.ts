@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Laser Targeting System',
   tagline: 'Camera-guided aiming and tracking prototype',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo/logo-dark_no-text_no-bg.ico',
 
   future: {
     v4: true,
@@ -59,7 +59,8 @@ const config: Config = {
       title: 'Laser Targeting System',
       logo: {
         alt: 'LTS Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo/logo-light_no-text_no-bg.png',
+        srcDark: 'img/logo/logo-dark_no-text_no-bg.png',
       },
       items: [
         {
@@ -78,6 +79,12 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
+      logo: {
+        alt: 'Laser Targeting System Logo',
+        src: 'img/logo/logo-dark_text_bg-no-bg.png',
+        href: 'https://github.com/laser-targeting-system',
+        width: 200,
+      },
       links: [
         {
           title: 'Project',

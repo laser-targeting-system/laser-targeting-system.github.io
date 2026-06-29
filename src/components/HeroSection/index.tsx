@@ -1,5 +1,6 @@
 import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
+import HeroTitle from '../HeroTitle';
 import styles from './styles.module.css';
 
 /* ─── Hero SVG Visual ────────────────────────────────────────────────────── */
@@ -175,10 +176,8 @@ export default function HeroSection(): ReactNode {
             Educational Capstone Prototype
           </div>
 
-          <h1 className={styles.title}>
-            Laser Targeting<br />
-            <span className={styles.accent}>System</span>
-          </h1>
+          <HeroTitle />
+
 
           <p className={styles.subtitle}>
             Camera-guided aiming and tracking mockup using computer vision,
