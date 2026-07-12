@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import styles from './styles.module.css';
 
 /**
@@ -15,7 +15,7 @@ import styles from './styles.module.css';
  */
 type TeamMember = {
   name: string;
-  role: string;
+  // role: string;
   github: string;
   initials: string;
   color: string;
@@ -24,31 +24,31 @@ type TeamMember = {
 // TODO: Replace placeholder values with real team member details.
 const TEAM_MEMBERS: TeamMember[] = [
   {
-    name: 'Team Member 1',
-    role: 'System Architecture & Computer Vision',
-    github: 'placeholder-member-1',   // TODO: Replace with real GitHub username
-    initials: 'M1',
+    name: 'Jakub',
+    // role: 'System Architecture & Computer Vision',
+    github: 'krecikkko',   // TODO: Replace with real GitHub username
+    initials: 'KR',
     color: '#0891b2',
   },
   {
-    name: 'Team Member 2',
-    role: 'Machine Learning & YOLO Integration',
-    github: 'placeholder-member-2',   // TODO: Replace with real GitHub username
-    initials: 'M2',
+    name: 'Laura',
+    // role: 'Machine Learning & YOLO Integration',
+    github: 'lauragabryjanczyk',   // TODO: Replace with real GitHub username
+    initials: 'LG',
     color: '#7c3aed',
   },
   {
-    name: 'Team Member 3',
-    role: 'Embedded Systems & Arduino Firmware',
-    github: 'placeholder-member-3',   // TODO: Replace with real GitHub username
-    initials: 'M3',
+    name: 'Jakub',
+    // role: 'Embedded Systems & Arduino Firmware',
+    github: 'kaczka05',   // TODO: Replace with real GitHub username
+    initials: 'KA',
     color: '#0891b2',
   },
   {
-    name: 'Team Member 4',
-    role: 'Dataset Annotation & Calibration',
-    github: 'placeholder-member-4',   // TODO: Replace with real GitHub username
-    initials: 'M4',
+    name: 'Damian',
+    // role: 'Dataset Annotation & Calibration',
+    github: 'DragoDam',   // TODO: Replace with real GitHub username
+    initials: 'DD',
     color: '#7c3aed',
   },
 ];
@@ -61,12 +61,12 @@ function GitHubIcon(): ReactNode {
   );
 }
 
-function MemberCard({member}: {member: TeamMember}): ReactNode {
+function MemberCard({ member }: { member: TeamMember }): ReactNode {
   const avatarUrl = `https://github.com/${member.github}.png`;
 
   return (
     <div className={styles.card}>
-      <div className={styles.avatarWrap} style={{'--member-color': member.color} as React.CSSProperties}>
+      <div className={styles.avatarWrap} style={{ '--member-color': member.color } as React.CSSProperties}>
         {/* GitHub avatar — falls back to initials on error */}
         <img
           src={avatarUrl}
@@ -86,7 +86,7 @@ function MemberCard({member}: {member: TeamMember}): ReactNode {
 
       <div className={styles.info}>
         <h3 className={styles.name}>{member.name}</h3>
-        <p className={styles.role}>{member.role}</p>
+        {/* <p className={styles.role}>{member.role}</p> */}
       </div>
 
       <a

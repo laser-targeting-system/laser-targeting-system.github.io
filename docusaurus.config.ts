@@ -64,13 +64,6 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Docs',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
           href: 'https://github.com/laser-targeting-system',
           label: 'GitHub',
           position: 'right',
@@ -92,14 +85,6 @@ const config: Config = {
             {
               label: 'Home',
               to: '/',
-            },
-            {
-              label: 'Documentation',
-              to: '/docs/intro',
-            },
-            {
-              label: 'Blog',
-              to: '/blog',
             },
           ],
         },

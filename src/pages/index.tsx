@@ -9,7 +9,6 @@ import TechBadges from '@site/src/components/TechBadges';
 import DemoResults from '@site/src/components/DemoResults';
 import FutureWork from '@site/src/components/FutureWork';
 import TeamSection from '@site/src/components/TeamSection';
-import DocsPreview from '@site/src/components/DocsPreview';
 
 export default function Home(): ReactNode {
   return (
@@ -25,7 +24,6 @@ export default function Home(): ReactNode {
         <DemoResults />
         <FutureWork />
         <TeamSection />
-        <DocsPreview />
       </main>
     </Layout>
   );

@@ -198,9 +198,6 @@ export default function HeroSection(): ReactNode {
               <span className={styles.playIcon} aria-hidden="true">▶</span>
               Watch Demo
             </a>
-            <Link to="/docs/intro" id="hero-docs-btn" className={styles.btnGhost}>
-              Documentation →
-            </Link>
           </div>
 
           {/* <p className={styles.disclaimer}>
